@@ -1,0 +1,45 @@
+---
+title: "Tidy Tuesday - "
+author: "Chun Su"
+output: github_document
+params:
+  data_date: '2021-10-19'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
+ggplot2::theme_set(ggplot2::theme_bw())
+
+# parems set
+year <- lubridate::year(lubridate::ymd(params$data_date))
+readme_link <- paste0("https://github.com/rfordatascience/tidytuesday/blob/master/data/", year,"/",params$data_date, "/readme.md")
+
+# load data
+tuesdata <- tidytuesdayR::tt_load(params$data_date)
+```
+
+Load required libraries
+
+```{r lib, message=F}
+library(tidyverse)
+library(tidymodels)
+library(lubridate)
+
+```
+
+
+Data README is available at [here](`r readme_link`).
+
+```{r}
+
+# ultra_rankings <- tuesdata$ultra_rankings
+
+# ultra_rankings
+```
+
+## Explore Data
+
+
+## ML
+
+
